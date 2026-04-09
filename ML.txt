@@ -1,0 +1,66 @@
+Supervised Learning is a machine learning paradigm in which a model is trained on labeled data, meaning each input is associated with a known output. The model learns a mapping function between inputs and outputs by minimizing prediction error during training and is then used to make accurate predictions on unseen data.
+
+
+Classification is a supervised learning technique in which the objective is to predict a discrete or categorical output. The model assigns an input to one of the predefined classes ,it consist decision boundaries that separate one class from another.It uses loss fuction like cross-entropy Ezxample-spam detection, fraud detection,
+2. Regression is also a supervised learning technique, but its objective is to predict a continuous numerical value. Instead of assigning a class, the model estimates a real-valued output, such as house price, salary
+
+3. KNN is an supervised , instance based machine learning algorithm that is used for both regression and classification task.It calcylates   the distance of the k nearest neighbours and assign the new input to the majority class of its nearest neighbour.
+KNN is easy to understand and implement, but it can be slow for large datasets since it requires computing distances to all points at prediction time.
+
+4. Decision Tree is a supervised machine learning algorithm that is used for both classification and regression .It  works by creating a tree like structure that is built by selecting the features taht best seperate the data where each internal node represent the decision on a selected feature ,the branches represent the outcome and the leaf nodes represent the final prediction.
+Decision Trees are easy to implement and visualize, making them intuitive for explaining predictions.
+but a single decision tree can overfit the trainin datatset ,hence we use ensemble learning methods like random forest and gradient boosting to give better performance.
+
+5. Random Forest- is an esemble learning method that builda multiple decision tree on random subset of the data and combines the prediction to improve accuracy and reduce overfitting.
+
+6. Gradient boosting is another esemble learning method which builds multiple decision tree sequentially where each decsison tree improves the error of the previous decision tree.it uses gradient descent to minimize the loss function and give high accuracy than random forest .
+
+   XGBoost (Extreme Gradient Boosting) is an advanced, high-performance implementation of gradient boosting. Like gradient boosting, it builds decision trees sequentially, where each tree tries to correct the errors of the previous trees, minimizing the overall prediction error. What makes XGBoost special is that it is optimized for speed, efficiency, and accuracy.
+
+
+7. Support Vector Machine (SVM) is a supervised machine learning algorithm used mainly for classification.It finds the hyperplane that seggregates the data into different classes. The best hyperplane is the one that maximize the margin, which is the distance between hyperplane and the nearest points called support vectors.
+
+Unsupervised Learning is a machine learning approach that operates on unlabeled data and aims to discover underlying patterns, structures, or relationships within the dataset. Instead of predicting predefined outputs, the model identifies similarities, groupings, or feature representations.
+
+K-Means is an unsupervised clustering algorithm that groups data points into k clusters based on similarity.Assign each data point to the nearest centroid based on a distance metric.update the centroid by calculating the mean of all points assigned to the clusters .
+
+Clustering is an unsupervised machine learning technique that groups unlabeled data into clusters based on similarity. Its goal is to discover patterns or relationships within the data without any prior knowledge of categories or labels.
+Groups data points that share similar features or characteristics.
+
+Reinforcement Learning is a learning framework in which an autonomous agent learns optimal decision-making by interacting with an environment. The agent selects actions based on its current state and receives feedback in the form of rewards or penalties, with the objective of maximizing long-term cumulative reward. It is widely used in sequential decision-making problems such as robotics, game AI, and autonomous systems.
+
+
+
+Underfitting occurs when a machine learning model is too simple to capture the underlying patterns and learn the relationship between features in the data. As a result, the model performs poorly on both training and test data.
+Overfitting occurs when the model is too complex and learns the training data including its noise instead of learning patterns.As a result it performs too well on training data and  doesn't perform well on testing/unseen dataset .
+
+ways to overcome overfitting-
+1. use more training dataset 
+   2. Regularization
+   3. Simplify the model
+   4. Cross-validation to tune hyperparameters.
+
+
+2. Regularization is a technique that is used to overcome overfitting , it adds the penalty term in the loss function to reduce 
+   its complexity and improve its generalization on unseen dataset.
+  There are two common types of regularization:
+  -L1 Regularization (Lasso): Adds the absolute values of weights to the loss function. It can shrink some weights to zero.
+  -L2 Regularization (Ridge): Adds the squared values of weights to the loss function. It reduces large weights smoothly but usually
+    does not set them to zero.
+
+
+3. ANN(Artificial Neural network)is a computational model inspired by the structure and functioning of the human brain, consisting of interconnected processing units called neurons.These neurons are organized into layers: an input layer, one or more hidden layers, and an output layer. Each neuron receives inputs, applies weights, adds a bias, and passes the result through an activation function to produce an output.
+
+
+4. Optimizers are algorithms used in machine learning and neural networks to update the model’s parameters, such as weights and biases, during training in order to minimize the loss function.
+
+5. Model parameters are th internal values that are learned from the training data .During training ,these parameters are updated repeatedly to minimize the loss function.example- bias,weights
+Hyperparameters are the external values that are set before the training process. They are not learned from the data rather its predefined  and can significantly affect the model performance. Example of hyperparameters are learning rate, number of epochs, batch size, number of layers.
+
+6. An activation function is a mathematical function applied to the output of a neuron in a neural network to introduce non-linearity.
+Sigmoid: Outputs values between 0 and 1, commonly used in binary classification.
+ReLU (Rectified Linear Unit): Outputs zero for negative inputs and the input itself for positive values; 
+Softmax: Converts outputs into probabilities that sum to 1, used in multi-class classification.
+
+
+
