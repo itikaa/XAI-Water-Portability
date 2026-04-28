@@ -7,10 +7,15 @@ Created on Sun Mar 13 10:40:11 2022
 
 import numpy as np
 import pickle
+import os
 import streamlit as st
 
 # loading the saved model
-loaded_model = pickle.load(open('model_trained.sav', 'rb'))
+#loaded_model = pickle.load(open('model_trained.sav', 'rb'))
+model_path = os.path.join(os.path.dirname(__file__), 'model_trained.sav')
+
+with open(model_path, 'rb') as f:
+    loaded_model = pickle.load(f)
 
 #creating a function
 def waterQuality_prediction(input):
